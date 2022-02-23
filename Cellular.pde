@@ -16,6 +16,12 @@ class Cellular {
     for (int i = 0; i < values.length; i++) values[i] = random(1) >= 0.50;
   }
   
+  void total() {
+    while(!finished()) {
+      cellulate();
+    }
+  }
+  
   void cellulate() {
     generation++;
     boolean[] newValues = new boolean[values.length];
