@@ -2,8 +2,8 @@ Cellular cellular;
 
 public static int RULE = 106;
 public static int SCALE = 2;
-public static int POWER = 3;
-public static int DIGITS = 1 << POWER;
+public static int POWER = 3; // Should be an odd number
+public static int BOUND = POWER / 2;
 
 void setup() {
   size(600, 600);

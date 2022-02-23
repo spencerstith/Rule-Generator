@@ -23,7 +23,7 @@ class Cellular {
       // Draw the values for the current row
       if (values[i]) square(i * SCALE, generation * SCALE, SCALE);
       // Determine values for the next row
-      if (i != 0 && i != values.length - 1) newValues[i] = ruleset[bool2int(values, i)];
+      if (i > BOUND && i < values.length - BOUND) newValues[i] = ruleset[bool2int(values, i)];
     }
     values = newValues;
   }
